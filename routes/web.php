@@ -39,6 +39,8 @@ Route::Resource('usuarios' , 'UsersController');
 Route::get('login','Auth\LoginController@showLoginForm');
 Route::post('login','Auth\LoginController@Login');
 Route::get('logout','Auth\LoginController@logout');
+Route::get('login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
+
 
 /*
 Route::get('mensage',['as' => 'mensage.index','uses' => 'MesageController@index']);//mostrar
