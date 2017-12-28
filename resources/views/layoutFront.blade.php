@@ -233,9 +233,9 @@
                             <ul class="nav navbar-nav">
                                 <li  class="{{ activeMenu('/') }}"> <a  href=" {{ route('inicio')}}"> Inicio</a> </li>
 
-                               <li  class="{{activeMenu('visitarTemplos')}}"> <a href="{{route('visitarTemplos')}}">Visitar Templos</a> </li>
+                               <li  class="{{activeMenu('visitarTemplos')}}"> <a href="{{route('visitarTemplos')}}">Ubicacion de Productos</a> </li>
 
-                                <li  class="{{ activeMenu('nosotros')  }}"> <a href="{{ route('nosotros') }}">Nosotros</a> </li>
+                                <li  class="{{ activeMenu('nosotros')  }}"> <a href="{{ route('nosotros') }}">Productos</a> </li>
                                
                                 <li  class= "{{ activeMenu('mensajes/create') }}" ><a href="{{ route('mensajes.create')}}">Contacto</a>  </li>
                             
