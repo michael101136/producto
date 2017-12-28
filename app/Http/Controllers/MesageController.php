@@ -20,14 +20,13 @@ class MesageController extends Controller
           $this->middleware('auth', ['except' => ['create', 'store']]);
     }
 
-
     public function index()
     {
         
         //$mensage=DB::table('mensajes')->get();QUERY BUILDER
         $mensage=Mensaje::all();
         //return $mensage;
-        return view('mensage.index',['mensage' => $mensage ]);
+        return view('backEnd/mensage.index',['mensage' => $mensage ]);
     }
 
     /**
@@ -42,7 +41,7 @@ class MesageController extends Controller
         'php',
         'asp'
         ];
-        return view('mensage/create',['lenguajes' => $lenguajes]);
+        return view('backEnd/mensage/create',['lenguajes' => $lenguajes]);
     }
 
     /**
@@ -61,8 +60,8 @@ class MesageController extends Controller
          ]);*/
          Mensaje::create($request->all());
 
-
          return redirect()->route('mensajes.create')->with('info' , 'Hemos recibidos tu mensaje');
+
          //return $request->all;
     }
 
@@ -76,7 +75,7 @@ class MesageController extends Controller
     {
         //$detalleMensage =DB::table('mensajes')->where('id' , $id)->first();
         $detalleMensage =Mensaje::findOrFail($id);
-        return view('mensage.show', ['detalleMensage' => $detalleMensage]);
+        return view('backEnd/mensage.show', ['detalleMensage' => $detalleMensage]);
     }
 
     /**
@@ -90,7 +89,7 @@ class MesageController extends Controller
         
         //$detalleMensage =DB::table('mensajes')->where('id' , $id)->first();
           $detalleMensage =Mensaje::findOrFail($id);
-        return view('mensage.edit',['detalleMensage' => $detalleMensage]);
+        return view('backEnd/mensage.edit',['detalleMensage' => $detalleMensage]);
 
     }
 

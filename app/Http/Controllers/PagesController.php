@@ -19,7 +19,7 @@ class PagesController extends Controller
 
 	public function inicio()
 	{
-		   return view('inicio/inicio');
+		   return view('frontEnd/inicio/inicio');
 	}
 	/*public function contacto($nombre='Invitado')
 	{
@@ -49,12 +49,12 @@ class PagesController extends Controller
 
 	public function nosotros()
 	{
-		return view('inicio/nosotros');
+		return view('frontEnd/inicio/nosotros');
 	}
 
 	public function visitarTemplos()
 	{
-		return view('inicio/visitarTemplos');
+		return view('frontEnd/inicio/visitarTemplos');
 	}
 
 

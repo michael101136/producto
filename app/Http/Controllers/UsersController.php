@@ -23,7 +23,7 @@ class UsersController extends Controller
     {
         
         $Users = \App\User::all();
-        return view('Users.index' ,["Users" => $Users]);
+        return view('backEnd/Users.index' ,["Users" => $Users]);
 
     }
 
@@ -70,7 +70,7 @@ class UsersController extends Controller
         
         $user=User::findOrFail($id);
 
-        return view('Users.edit',compact('user'));
+        return view('backEnd/Users.edit',compact('user'));
     }
 
     /**
@@ -84,7 +84,6 @@ class UsersController extends Controller
     {
         //return $request->all();//saber si envia dato para actualizar
         
-        echo($request);exit;
         $user =User::findOrFail($id);
 
         $user->update($request->all());
