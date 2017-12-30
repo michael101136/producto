@@ -42,6 +42,13 @@ Route::get('logout','Auth\LoginController@logout');
 Route::get('login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
 
 
+Route::resource('unidadmedida','UnidadMedida');
+
+Route::resource('claseproducto','ClaseProducto');
+
+Route::resource('temporadaproducto','TemporadaProducto');
+
+Route::resource('etapaproducto','EtapaProducto');
 /*
 Route::get('mensage',['as' => 'mensage.index','uses' => 'MesageController@index']);//mostrar
 Route::get('mensage/create',['as' => 'mensage.create','uses' => 'MesageController@create']);//formulario
